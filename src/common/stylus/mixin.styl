@@ -1,0 +1,13 @@
+// 文本溢出省略
+no-wrap()
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+clearfix()
+  &:after
+    content: '.'
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
