@@ -102,6 +102,7 @@ export default {
     line-height: 34px
     vertical-align: text-bottom
     font-size: $font-size-m
+    white-space: nowrap
     background: $bg-color
     &:nth-child(even)
       background: #2E2E2E

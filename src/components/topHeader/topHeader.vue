@@ -50,6 +50,7 @@ export default {
   left: 0
   z-index: 99
   width: 100%
+  min-width: 1300px
   height: 58px
   background: $bg-color-d
   color: $text-color-d

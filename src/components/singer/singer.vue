@@ -30,6 +30,7 @@
         </div>
         <singer-list :list="singerList" @select="selectSinger"></singer-list>
       </div>
+      <loading v-show="!singerList.length"></loading>
     </scroll>
     <router-view></router-view>
   </div>
@@ -42,6 +43,7 @@ import { shortSinger } from 'common/js/singer'
 import { mapMutations } from 'vuex'
 import SingerList from 'components/singerList/singerList'
 import Scroll from 'baseCpn/scroll/scroll'
+import Loading from 'baseCpn/loading/loading'
 const LIMIT = 30
 export default {
   name: 'Singer',
@@ -164,7 +166,8 @@ export default {
   },
   components: {
     SingerList,
-    Scroll
+    Scroll,
+    Loading
   }
 }
 </script>

@@ -37,6 +37,7 @@ export default {
   position: relative
   height: 100%
   width: 100%
+  min-width: 1300px
   .content-view
     position: absolute
     top: 60px

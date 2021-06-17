@@ -23,6 +23,7 @@
         <!-- 页码 -->
         <pager :total="totalSheet" :currentPage="currentPage" @selectPage="getPageData"></pager>
       </div>
+      <loading v-show="!currentSheet.length"></loading>
     </scroll>
     <router-view></router-view>
   </div>
@@ -37,6 +38,7 @@ import Panel from 'baseCpn/panel/panel'
 import SongSheetList from 'components/songSheetList/songSheetList'
 import Pager from 'baseCpn/pager/pager'
 import Scroll from 'baseCpn/scroll/scroll.vue'
+import Loading from 'baseCpn/loading/loading'
 
 const SHEET_LIMIT = 50
 const ALL_CAT = '全部歌单'
@@ -149,7 +151,8 @@ export default {
     Panel,
     SongSheetList,
     Pager,
-    Scroll
+    Scroll,
+    Loading
   }
 }
 </script>

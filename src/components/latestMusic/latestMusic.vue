@@ -28,6 +28,7 @@
         </li>
       </ul>
     </div>
+    <loading v-show="!newSongs.length"></loading>
   </scroll>
 </template>
 
@@ -38,6 +39,7 @@ import { createSong } from 'common/js/song'
 import { formatTime, prefixNum } from 'common/js/util'
 import { mapActions } from 'vuex'
 import Scroll from 'baseCpn/scroll/scroll'
+import Loading from 'baseCpn/loading/loading'
 
 const LIMIT = 15
 export default {
@@ -126,7 +128,8 @@ export default {
     ])
   },
   components: {
-    Scroll
+    Scroll,
+    Loading
   }
 }
 </script>
@@ -154,6 +157,7 @@ export default {
       width: 100%
       height: 80px
       line-height: 80px
+      white-space: nowrap
       font-size: $font-size-m
       &:nth-child(even)
         background: #2E2E2E
@@ -189,7 +193,7 @@ export default {
       .song-name
         display: inline-block
         width: 30%
-        min-width: 250px
+        min-width: 200px
         margin-left: 14px
         color: $text-color-ll
         no-wrap()

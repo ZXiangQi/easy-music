@@ -189,6 +189,7 @@ export default {
     position: absolute
     top: 35px
     left: -55px
+    z-index: 99
     width: 352px
     height: 448px
     overflow: hidden

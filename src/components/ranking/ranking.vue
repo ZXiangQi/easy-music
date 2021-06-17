@@ -42,6 +42,7 @@
         </ul>
       </div>
     </div>
+    <loading v-show="!topList.length"></loading>
   </scroll>
 </template>
 
@@ -50,6 +51,7 @@ import { getToplist } from 'api/ranking'
 import { ERR_OK } from 'api/config'
 import { mapMutations } from 'vuex'
 import Scroll from 'baseCpn/scroll/scroll'
+import Loading from 'baseCpn/loading/loading'
 export default {
   name: 'Ranking',
   data() {
@@ -114,7 +116,8 @@ export default {
     })
   },
   components: {
-    Scroll
+    Scroll,
+    Loading
   }
 }
 </script>

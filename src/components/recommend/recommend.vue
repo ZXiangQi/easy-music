@@ -26,6 +26,7 @@
         </ul>
       </div>
     </div>
+    <loading v-show="!recommendSheet.length"></loading>
   </scroll>
 </template>
 
@@ -38,6 +39,7 @@ import { mapMutations, mapActions } from 'vuex'
 import Banner from 'baseCpn/banner/banner'
 import SongSheetList from 'components/songSheetList/songSheetList'
 import Scroll from 'baseCpn/scroll/scroll'
+import Loading from 'baseCpn/loading/loading'
 
 export default {
   name: 'Recommend',
@@ -97,7 +99,8 @@ export default {
   components: {
     Banner,
     SongSheetList,
-    Scroll
+    Scroll,
+    Loading
   }
 }
 </script>

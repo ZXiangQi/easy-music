@@ -28,6 +28,7 @@
       </div>
     </div>
     <song-list :songs="songList"></song-list>
+    <loading v-show="!songList.length"></loading>
   </scroll>
 </template>
 
@@ -40,6 +41,7 @@ import { createSong } from 'common/js/song'
 
 import Scroll from 'baseCpn/scroll/scroll'
 import SongList from 'components/songList/songList'
+import Loading from 'baseCpn/loading/loading'
 export default {
   name: 'SongSheetDetail',
   data() {
@@ -136,7 +138,8 @@ export default {
   },
   components: {
     SongList,
-    Scroll
+    Scroll,
+    Loading
   }
 }
 </script>

@@ -28,6 +28,7 @@
         <singer-desc v-else-if="currentIndex === 1" :desc="desc"></singer-desc>
         <singer-similar v-else-if="currentIndex === 2" :similar="similar" @select="selectSinger"></singer-similar>
       </div>
+      <loading v-show="!songList.length"></loading>
     </scroll>
   </div>
 </template>
@@ -43,6 +44,7 @@ import { getSheetSongDetail } from 'api/songSheet'
 import SingerDesc from 'components/singerDesc/singerDesc'
 import SingerSimilar from 'components/singerSimilar/singerSimilar'
 import SongList from 'components/songList/songList'
+import Loading from 'baseCpn/loading/loading'
 
 const LIMIT = 30
 export default {
@@ -179,7 +181,8 @@ export default {
     Scroll,
     SingerDesc,
     SingerSimilar,
-    SongList
+    SongList,
+    Loading
   }
 }
 </script>
